@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: rgb(238, 241, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    background-color: white;
+    width: 900px;
+    height: 550px;
+    border-radius: 20px;
+}
+.player {
+    background: linear-gradient(135deg, #2c5a78, #4e4376);
+    border-radius: 0 20px 20px 0;
+    width: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    height: 120px;
+    width: 120px;
+    background-color: rgba(253, 253, 253, 0.137);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    padding: 20px;
+    animation: rotation 30s infinite linear;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#suahName, #readerName, #audioPlayer {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.controls button {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.219);
+    color: white;
+    margin-left: 15px;
+    transition: 0.2s;
+}
+.controls button:hover {
+    background-color: rgba(255, 255, 255, 0.345);
+}
+.controls button:active {
+    scale: 0.95;
+}
+#searchInput {
+    width: 85%;
+    border-radius: 10px;
+    border: 2px solid wheat;
+    padding: 10px;
+    outline: none;
+    margin: 20px;
+}
+.list {
+    width: 50%;
+}
+
+#surahList {
+    list-style: none;
+    height: 400px;
+    overflow: auto;
+    padding: 0 20px 20px 20px ;
+}
+#surahList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid wheat;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#surahList li:hover {
+    background-color: rgb(253, 249, 243);
+}
+.active {
+    background-color: wheat;
+    color: #2c5a78;
+    border-right: 2px solid #2c5a78;
+    font-weight: bold;
+}
